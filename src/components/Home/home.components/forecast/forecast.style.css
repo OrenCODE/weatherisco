@@ -1,0 +1,148 @@
+i {
+    font-style: normal;
+}
+
+.weather-container {
+    display: grid;
+    grid-gap: 40px;
+}
+
+.days-container {
+    display: grid;
+    margin-top: 50px;
+}
+
+.weather-container-wrapper {
+    margin: 0 30px;
+}
+
+.current-weather-row {
+    display: grid;
+    grid-template-columns: 1fr 0fr;
+}
+
+.current-weather-box {
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    align-items: center;
+}
+
+.weather-icon-container {
+    display: flex;
+}
+
+.current-weather-icon {
+    margin-left: -36px;
+    width: 180px;
+}
+
+.current-weather-container {
+    text-shadow: 4px 4px rgb(0 0 0 / 60%);
+    display: grid;
+    grid-gap: 10px;
+    -webkit-text-stroke: 1px rgb(0 0 0 / 60%);
+}
+
+.location-name {
+    font-size: 60px;
+    color: white;
+    font-weight: 700;
+    display: flex;
+}
+
+.current-weather-temp {
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    display: flex;
+}
+
+.weather-actions {
+    display: grid;
+    align-items: center;
+    justify-items: end;
+}
+
+.main-forecast {
+    text-shadow: 4px 10px rgb(0 0 0 / 60%);
+    text-align: center;
+    color: white;
+    font-size: 65px;
+    font-weight: 600;
+    margin: 30px 0;
+}
+
+.forecast-container {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 24px;
+}
+
+.cel-btn {
+    border: 2px solid #2e3b55;
+}
+
+.far-btn {
+    border: 2px solid #2e3b55;
+}
+
+.action-button {
+    border: 1px solid #29344B;
+    background: white;
+}
+
+@media (max-width: 1200px) {
+    .forecast-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 950px) {
+    .forecast-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 750px) {
+    .forecast-container {
+        grid-template-columns: unset;
+    }
+    .current-weather-row {
+        grid-template-columns: 1fr 0fr;
+    }
+    .location-name {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 680px) {
+    .forecast-container {
+        grid-template-columns: unset;
+    }
+    .current-weather-row {
+        display: unset;
+    }
+    .location-name {
+        font-size: 30px;
+    }
+    .current-weather-temp{
+        font-size: 32px;
+    }
+    .weather-container {
+        margin: unset;
+    }
+    .weather-container-wrapper {
+        margin: 0;
+    }
+    .weather-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 45px 0 0;
+        justify-items: center;
+    }
+    .current-weather-icon {
+        margin: 0;
+        width: 180px;
+    }
+}
